@@ -1,0 +1,3 @@
+{
+    "ignore" : ["*.svelte", "/node_modules/*", "/public/*", "/scripts/*", "/src/*"]
+}
