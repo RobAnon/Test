@@ -1,17 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-	--black: #111;
+	--darkblack: #131313;
+	--midblack: #161616;
+	--lightblack: #212121;
+	--grey: #bbbbbb;
+	--white: #efefef;
+}
+
+::selection {
+	background-color: var(--grey);
+	color: black;
 }
 
 * {
-	color: white;
+	color: var(--white);
 	box-sizing: border-box;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	background-color: var(--black);
+	background-color: var(--darkblack);
+}
+
+main {
+	margin: 0;
+	padding: 0;
+}
+.section {
+	margin: 0;
+	padding: 0px 50px;
+}
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+h1 {
+	font-size: 70px;
+}
+h2 {
+	font-size: 50px;
+}
+h3 {
+	font-size: 44px;
+}
+h4 {
+	font-size: 36px;
+}
+h5 {
+	font-size: 22px;
+}
+h6 {
+	font-size: 18px;
+}
+p, a, label {
+	font-size: 18px;
+	color: var(--grey);
+	font-weight: 200;
+}
+
+
+
+.bg {
+	height: 100vh;
+	width: 100%;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: linear-gradient(-160deg, var(--lightblack), var(--darkblack), var(--darkblack));
+}
+
+
+
+.blind-wrap {
+	overflow: hidden;
+}
+.blind-text {
+	margin: 0;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: transform 0.8s ease-in-out;
+}
+
+
+.fade-in {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all 1s ease-in-out;
+}
+
+
+
+.linebreak-container {
+	position: relative;
+	width: 100%;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+}
+.linebreak {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0%;
+	height: 1px;
+	background: gold;
+	transition: all 1.4s;
 }
